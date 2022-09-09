@@ -1,4 +1,6 @@
-def selectionSort(array, size) -> None:
+from typing import List
+
+def selectionSort(array, size) -> List[int]:
   # Write your code here
 
 # Do not change the following code
@@ -9,5 +11,4 @@ for item in input_data.split(', '):
     data.append(int(item))
   elif item.lstrip("-").isnumeric():
     data.append(int(item))
-selectionSort(data, len(data))
-print(data)
+print(selectionSort(data, len(data)))
