@@ -1,9 +1,15 @@
-def selectionSort(array):
-    for i in range(len(array)):
-        min_index = min(range(i, len(array)), key=array.__getitem__)
-        array[i], array[min_index] = array[min_index], array[i]
-    return array
+from typing import List
+
+def selectionSort(array, size) -> List[int]:
+  # Write your code here
 
 # Do not change the following code
-data = list(map(int, input().split(', ')))
-print(selectionSort(data))
+input_data = input()
+data = []
+for item in input_data.split(', '):
+  if item.isnumeric():
+    data.append(int(item))
+  elif item.lstrip("-").isnumeric():
+    data.append(int(item))
+print(selectionSort(data, len(data)))
+
